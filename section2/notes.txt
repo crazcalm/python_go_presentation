@@ -1,0 +1,41 @@
+Speech:
+-------
+
+Now that we know it is possible to call a go function from python, it is time 
+to test the limits of what we can do.
+
+In order to do that, we have to note that this method of calling go from python 
+has two points of failure; function input and funtion output. The object that 
+python passes to a go function must map to a go like object for go to be able 
+to act on it. And, when go returns an object to python, that object must map to 
+python like object for python to act on it.
+
+Some of python's basics types include int, float, string, list, and dict.
+
+Lets see how many of these data types can be passed to and interpreted by go!
+
+Part 2:
+-------
+
+Some of Go's basic types inclide int, float64, string, slice, and map.
+
+Lets see how many of these data types can python can handle!
+
+Int case:
+---------
+- Works fine? Try a few numbers, then try "10000000000"
+
+Float case:
+----------
+- Try anything because everything fails...
+
+String case:
+------------
+- Try "hello world", "hello", "Hello World", "hi", and "Hello World       "
+
+Part 3:
+------
+
+The next step would be to test cases that invlove both input and output, but I 
+am going to skip that part because it stands to reason that input that worked 
+can be matched to any of the outputs that worked.
