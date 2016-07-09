@@ -30,11 +30,38 @@
                 <section>
                     <h3>Section 1: It can be done!</h3>
                     <section>
-                        <p>Define shared object file</p>
+                       <p>We are going to write a go program. Make a 
+shared object out of that program, and then call that program from python</p>
                     </section>
                     <section>
-                        <p>We are going to write a go program. Make a 
-shared object out of that program, and then call that program from python</p>
+                        <p>Shared Object file?</p>
+
+                        <p>Shared libraries are libraries that are loaded 
+by programs when they start. In terms of convention, these files are 
+usually kept in a special place and given special names. You can read more 
+about that at 
+http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html
+</p>
+
+                        <p>For our purposes, we need to know that we can 
+build shared object files via Go and the name of these files end in ".so".
+</p>
+
+                        
+<!--source:http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html-->
+                    </section>
+                    <section>
+                        <p>Lets build a hello world shared object file!</p>
+                        <!--Go to hello world fiel and explain it first-->
+                        <!--Must go tools, export syntax, and build command-->
+                        <!--can touch on export naming convention, and .h files-->
+                    </section>
+                    <section>                     
+                        <p>go build -o output_file.so -buildmode=c-shared 
+source_file.go</p>
+                    </section>
+                    <section>
+                        <p>Lets call our shared object file from Python!</p>
                     </section>
                 </section>
                 <section>
