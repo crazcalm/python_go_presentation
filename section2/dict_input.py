@@ -2,9 +2,10 @@ import ctypes
 import os
 
 def main():
-    path = os.path.join(os.path.abspath("."), "add_one_int.so")
+    path = os.path.join(os.path.abspath("."), "dict_input.so")
     lib = ctypes.CDLL(path)
-    user_input = int(input("Enter your full name seperated by ','s: "))
+    user_input = {"fname": "Marcus", "lname": "Willock"}
+    print("Using this dict: {}".format(user_input))
     # create a dict
     lib.dict_input(user_input)
 
