@@ -52,7 +52,7 @@ build shared object files via Go and the name of these files end in ".so".
                     </section>
                     <section>
                         <p>Lets build a hello world shared object file!</p>
-                        <!--Go to hello world fiel and explain it first-->
+                        <!--Go to hello world file and explain it first-->
                         <!--Must go tools, export syntax, and build command-->
                         <!--can touch on export naming convention, and .h files-->
                     </section>
@@ -66,26 +66,72 @@ source_file.go</p>
                 </section>
                 <section>
                     <h3>Section 2: The Posibilities</h3>
-                </section>
-                <section>
-                    <section>Vertical Slide 1</section>
-                    <section>Vertical Slide 2</section>
+                    <section>
+                        <p>What can we pass into Go?</p>
+                        <ul>
+                            <li>Int</li>
+                            <li>String</li>
+                            <li>Float</li>
+                            <li>Bool</li>
+                            <li>List</li>
+                            <li>Dict</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>What can we return from Go?</p>
+                        <ul>
+                            <li>Int</li>
+                            <li>String</li>
+                            <li>Float</li>
+                            <li>Bool</li>
+                        </ul>
+
+                        <p>Slices? Maps? I am not even going to try.</p>
+                    </section>
                 </section>
                 <section>
                     <h3>Section 3: Lets Be Practical</h3>
+                    <section>
+                        <p>What do we know?</p>
+                        <ul>
+                            <li>If we want to wrap Go in Python, then we 
+probably want to utilize Go's speed and/or concurrency.</li>
+                            <li>We can pass Ints back and forth between Go and Python</li>
+                            <ol>
+                                <li>Can we pass an arbitrary number of Ints back and forth?</li>
+                            </ol>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>Contrived Examples</p>
+                        <ol>
+                            <li>Speed</li>
+                            <ul>
+                                <li>Prime Checker</li>
+                            </ul>
+                            <li>Concurrency</li>
+                            <ul>
+                                <li>Prime Counter</li>
+                            </ul>
+                        </ol>
+                    </section>
                 </section>
                 <section>
                     <h3>Conclusion</h3>
-                </section>
-                <section>
-    <pre><code data-trim data-noescape>
-(def lazy-fib
-  (concat
-   [0 1]
-   <mark>((fn rfib [a b]</mark>
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-    </code></pre>
-</section>
+                    <section>
+                        <p>The ability to use Go to Create shared objects files 
+anddynamically call them in Python is cool! It is also very hard to have these two 
+languages talk directly to each other.</p>
+                    </section>
+                    <section>
+                        <p>However, if you do not need Go and Python to talk 
+directly to one another, then you are <b>GOLDEN!</b></p>
+
+                    <p>You can then store all the data that needs to be 
+passed from one language to the other files that can then be read and 
+written to by both Go and Python.</p>
+                    </section>
+            </section>
             </div>
         </div>
         <script src="reveal.js-3.3.0/js/reveal.js"></script>
