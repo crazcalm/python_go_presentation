@@ -37,7 +37,7 @@ func printer(in <-chan int) int {
 }
 
 //export num_of_primes
-func num_of_primes(num int) int{
+func num_of_primes(num int) int {
 	numbers := make(chan int)
 	primes := make(chan int)
 
@@ -47,4 +47,4 @@ func num_of_primes(num int) int{
 	return answer
 }
 
-func main(){}
+func main() {}
