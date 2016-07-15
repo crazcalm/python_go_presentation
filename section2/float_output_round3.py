@@ -6,8 +6,8 @@ def main():
     lib = ctypes.CDLL(path)
     print("Answer is: ")
     print("-------------------")
-    answer = ctypes.c_float(lib.float_output())
-    print(answer)
+    answer = lib.float_output()
+    print(ctypes.c_float(answer))
     print("-------------------\n\n")
 
 if __name__ == "__main__":
