@@ -19,6 +19,12 @@
 know that if I get off to a Rocky start, I'll always have a Rocky finish"</p>
                     </section>
                     <section>
+                        <p>Github: 
+<a 
+href="https://github.com/crazcalm/python_go_presentation">https://github.com/crazcalm/python_go_presentation</a></p>
+                        <p>Social media handle: crazcalm</p>
+                    </section>
+                    <section>
                         <p>Talk Overview<p>
                         <ul>
                             <li>Building shared objects in Go</li>
@@ -32,7 +38,7 @@ know that if I get off to a Rocky start, I'll always have a Rocky finish"</p>
                     <h3>Section 1: It can be done!</h3>
                     <section>
                        <p>We are going to write a go program. Make a 
-shared object out of that program, and then call that program from python</p>
+shared object out of that program, and then call that program from python.</p>
                     </section>
                     <section>
                         <p>Shared Object file?</p>
@@ -103,7 +109,8 @@ shared libraries. It can be used to wrap these libraries in pure Python.</p>
                         <ul>
                             <li>If we want to wrap Go in Python, then we 
 probably want to utilize Go's speed and/or concurrency.</li>
-                            <li>We can pass Ints back and forth between Go and Python</li>
+                            <li>We can pass Ints and Strings back and forth 
+between Go and Python</li>
                             <ol>
                                 <li>Can we pass an arbitrary number of Ints back and forth?</li>
                             </ol>
@@ -127,16 +134,14 @@ probably want to utilize Go's speed and/or concurrency.</li>
                     <h3>Conclusion</h3>
                     <section>
                         <p>The ability to use Go to Create shared objects files 
-and dynamically call them in Python is cool! It is also very hard to have these 
-two 
-languages talk directly to each other.</p>
+and dynamically call them in Python is cool, but it is not easy.</p>
                     </section>
                     <section>
-                        <p>However, if you do not need Go and Python to talk 
+                        <p>If you do not need Go and Python to talk 
 directly to one another, then you are <b>GOLDEN!</b></p>
 
                     <p>You can then store all the data that needs to be 
-passed from one language to the other files that can then be read and 
+passed from one language to the other in files that can then be read and 
 written to by both Go and Python.</p>
                     </section>
             </section>
