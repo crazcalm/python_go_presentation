@@ -14,7 +14,7 @@
     Go 1.6.2 or greater
 
 ###Installing Go
-	One easy way to install GO is to use [GVM](https://github.com/moovweb/gvm) (Go Version Manager)
+	One easy way to install GO is to use [**GVM**](https://github.com/moovweb/gvm) (Go Version Manager)
 
 	The easiest way to install python is to use your OS's package manager or
-    download python from the [python.org website](https://www.python.org/downloads/).
+    download python from the [**python.org website**](https://www.python.org/downloads/).
