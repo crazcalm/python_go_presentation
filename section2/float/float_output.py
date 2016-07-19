@@ -1,9 +1,11 @@
 import ctypes
 import os
 
+
 def main():
     path = os.path.join(os.path.abspath("."), "float_output.so")
-    lib = ctypes.CDLL(path)
+    lib = ctypes.cdll.LoadLibrary(path)
+    lib.float_output.restype = ctypes.c_double
     print("Answer is: ")
     print("-------------------")
     answer = lib.float_output()
@@ -12,4 +14,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
