@@ -1,22 +1,33 @@
 package main
 
-import "C"
-import "math/rand"
-import "time"
-
-func init() {
-	rand.Seed(time.Now().UTC().UnixNano())
-}
+import (
+	"C"
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
 
 //export bool_output
 func bool_output() bool {
-	// Look into seeding a random generator
-	// figure out how to get random number.
-	answer := false
-	if rand.Intn(2) == 1 {
-		answer = true
+	fmt.Printf("Please enter a boolean value: ")
+	input := bufio.NewScanner(os.Stdin)
+	var result bool
+	for input.Scan() {
+		text := strings.TrimSpace(input.Text())
+
+		userBool, err := strconv.ParseBool(text)
+		if err != nil {
+			fmt.Printf("%s is not a valid answer.\n Try again: ", text)
+		} else {
+			result = userBool
+			break
+		}
 	}
-	return answer
+	return result
 }
 
-func main() {}
+func main() {
+	bool_output()
+}
