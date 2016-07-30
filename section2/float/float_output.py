@@ -4,7 +4,7 @@ import os
 
 def main():
     path = os.path.join(os.path.abspath("."), "float_output.so")
-    lib = ctypes.cdll.LoadLibrary(path)
+    lib = ctypes.CDLL(path)
     lib.float_output.restype = ctypes.c_double
     print("Answer is: ")
     print("-------------------")
